@@ -1,0 +1,72 @@
+ul,li{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.clearfix:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.img-ct{
+  position: relative;
+  width: 320px;
+  height: 240px;
+  overflow: hidden;
+}
+.img-ct .img-list{
+  position: absolute;
+}
+.img-ct .img-list>li{
+  float: left;
+}
+.img-ct img{
+  width: 320px;
+  height: 240px;
+}
+.arrow{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  border-radius: 50%;
+  z-index: 1;
+  color: #fff;
+  background: rgba(0,0,0,.25);
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+}
+.arrow:hover{
+  background: rgba(0,0,0,.4);
+}
+.arrow.prev{
+  left: 10px;
+}
+.arrow.next{
+  right: 10px;
+}
+.buttons{
+  position: absolute;
+  z-index: 1;
+  /* 绝对定位元素必须设置宽度，此处设为100%，表示全部由子元素撑起来 */
+  width: 100%;
+  bottom: 10px;
+  /* font-size设为0，去掉inline-block的空隙 */
+  font-size: 0;
+  text-align: center;
+}
+.buttons>li{
+  display: inline-block;
+  font-size: 0;
+  width: 30px;
+  height: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin: 0 3px;
+  cursor: pointer;
+}
+.buttons>li.active{
+  background: #ccc;
+}
