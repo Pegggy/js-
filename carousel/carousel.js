@@ -104,19 +104,3 @@ Carousel.prototype.clock = function(){
   })  
 }
 new Carousel($('.img-ct'));
-// var clock = setInterval(function(){
-//   playNext(1);
-// },3000);
-
-// $ct.on('mouseenter',function(){
-//   clearInterval(clock);
-// })
-// $ct.on('mouseleave',function(){
-//   clock = setInterval(function(){
-//   playNext(1);
-// },3000);
-// })
-
-
-
-
