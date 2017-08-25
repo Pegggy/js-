@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Tab组件</title>
+  <style>
+
+    .ct ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+    .ct li{
+        box-sizing: border-box;
+    }
+    .ct{
+        margin: 20px 10px;
+    }
+
+    .header:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .header>li{
+        float: left;
+        border-right: 1px solid #f1f1f1;
+        border-top: 1px solid #f1f1f1;
+        width: 100px;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        cursor: pointer;
+        
+    }
+    .header :first-child{
+        border-left: 1px solid #f1f1f1;
+        border-top-left-radius: 3px;
+    }
+    .header :last-child{
+      border-top-right-radius: 3px;
+    }
+    .header>li.active{
+        background: #f1f1f1;
+        
+    }
+    .contents{
+        border: 1px solid #f1f1f1;
+        width: 298px;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+    .contents>li{
+        display: none;
+    }
+    .contents>li.active{
+        display: block;
+        padding:  10px;
+        text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="ct">
+      <ul class="header">
+          <li class="active">tab1</li>
+          <li>tab2</li>
+          <li>tab3</li>
+      </ul>
+      <ul class="contents">
+          <li class="active">
+              content1content1content1
+              content1content1content1
+              content1content1content1
+        </li>
+          <li>content2content2content2
+              content2content2content2
+              content2content2content2</li>
+          <li>content3content3content3
+              content3content3content3
+              content3content3content3</li>
+      </ul>   
+  </div>
+  <div class="ct">
+      <ul class="header">
+          <li  class="active">tab1</li>
+          <li>tab2</li>
+          <li>tab3</li>
+      </ul>
+      <ul class="contents">
+          <li class="active">content1</li>
+          <li>content2</li>
+          <li>content3</li>
+      </ul>   
+  </div>
+  <script src="tab.js"></script>
+</body>
+</html>
