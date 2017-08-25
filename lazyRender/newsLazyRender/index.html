@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>新闻加载</title>
+  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <style>
+    ul,li{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    h2,p{
+      margin: 0;
+    }
+    a{
+      text-decoration: none;
+      color: #999;
+    }
+    .clearfix::after{
+      content: '';
+      display: block;
+      clear: both;
+    }
+    .wrap{
+      width: 600px;
+      margin: 0 auto;
+    }
+    .news{
+      font-size: 14px;
+      margin-top: 10px;
+    }
+    .thumb{
+      float: left;
+    }
+    .thumb img{
+      width: 50px;
+      height: 50px;
+    }
+    .news h2{
+      font-size: 14px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+      margin-left: 60px;
+    }
+    .news p{
+      margin-left: 60px;
+    }
+    .load-more{
+      width: 3px;
+      height: 3px;
+      visibility: hidden;
+    }
+  </style>
+</head>
+<body>
+  <ul class="wrap">
+  </ul>
+  <p class="load-more"></p>
+  <script src="news.js"></script>
+</body>
+</html>

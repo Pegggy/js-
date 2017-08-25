@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="cn-ZH">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <title>图片懒加载</title>
+    <style>
+        ul,li{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 600px;
+            margin: 0 auto;            
+        }
+        .container ul:after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .container li{
+            float: left;
+            margin: 10px;
+        }
+        .container li img{
+            width: 240px;
+
+        }
+    </style>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <ul class="container">
+        <li><a href="#"><img src="img/blank.jpg" data-src="img/1.jpg"></a></li>
+        <li><a href="#"><img src="img/blank.jpg" data-src="img/2.jpg"></a></li>
+        <li><a href="#"><img src="img/blank.jpg" data-src="img/3.jpg"></a></li>
+        <li><a href="#"><img src="img/blank.jpg" data-src="img/4.jpg"></a></li>
+        <li><a href="#"><img src="img/blank.jpg" data-src="img/5.jpg"></a></li>
+        <li><a href="#"><img src="img/blank.jpg" data-src="img/6.jpg"></a></li>
+        <li><a href="#"><img src="img/blank.jpg" data-src="img/7.jpg"></a></li>
+        <li><a href="#"><img src="img/blank.jpg" data-src="img/8.jpg"></a></li>
+        <li><a href="#"><img src="img/blank.jpg" data-src="img/9.jpg"></a></li>
+        <li><a href="#"><img src="img/blank.jpg" data-src="img/10.jpg"></a></li>
+        <li><a href="#"><img src="img/blank.jpg" data-src="img/11.jpg"></a></li>
+        <li><a href="#"><img src="img/blank.jpg" data-src="img/12.jpg"></a></li>
+        <li><a href="#"><img src="img/blank.jpg" data-src="img/13.jpg"></a></li>
+        <li><a href="#"><img src="img/blank.jpg" data-src="img/14.jpg"></a></li>
+        <li><a href="#"><img src="img/blank.jpg" data-src="img/15.jpg"></a></li>
+        <li><a href="#"><img src="img/blank.jpg" data-src="img/16.jpg"></a></li>
+    </ul>  
+<script src="lazy.js"></script>
+</body>
+</html>
