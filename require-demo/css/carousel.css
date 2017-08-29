@@ -1,18 +1,8 @@
-ul,li{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-.clearfix:after{
-  content: '';
-  display: block;
-  clear: both;
-}
 .carousel-ct{
   margin: 0 auto;
   position: relative;
   width: 960px;
-  height: 700px;
+  height: 720px;
   overflow: hidden;
 }
 .carousel-ct .carousel-list{
@@ -23,6 +13,7 @@ ul,li{
 }
 .carousel-ct img{
   width: 960px;
+  height: 720px;
 }
 .arrow{
   width: 30px;
@@ -47,7 +38,7 @@ ul,li{
 .arrow.next{
   right: 10px;
 }
-.buttons{
+.carousel-ct .buttons{
   position: absolute;
   z-index: 1;
   /* 绝对定位元素必须设置宽度，此处设为100%，表示全部由子元素撑起来 */
@@ -57,7 +48,7 @@ ul,li{
   font-size: 0;
   text-align: center;
 }
-.buttons>li{
+.carousel-ct .buttons>li{
   display: inline-block;
   font-size: 0;
   width: 30px;
@@ -67,6 +58,6 @@ ul,li{
   margin: 0 3px;
   cursor: pointer;
 }
-.buttons>li.active{
+.carousel-ct .buttons>li.active{
   background: #ccc;
 }

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html,body,ul,li,p,div{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    ul,li{
+      list-style: none;
+    }
+    .wrap{
+      width: 900px;
+      margin: 0 auto;
+    }
+    .img-ct{
+      position: relative;
+    }
+    .img-ct .item{
+      position: absolute;
+      width: 280px;
+      margin-right: 20px;
+      margin-top: 20px;
+      border: 1px solid #ccc;
+      box-shadow: 2px 6px 12px 4px rgba(0, 0, 0, .2);
+    }
+    .img-ct .hide{
+      display: none;
+    }
+    .item  img{
+      width: 260px;
+      margin: 10px;
+    }
+    .load-more{
+      width: 100px;
+      height: 20px;
+      visibility: hidden;
+    }
+  </style>
+  <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <div class="waterfall-ct">
+      <ul class="img-ct">
+        <!-- <li class="item">
+            <img src="" alt="">
+        </li> -->
+        <li class="item hide"></li>
+      </ul>
+      <div class="load-more"></div>
+    </div>
+  </div>
+  <script src="lazy.js"></script>
+</body>
+</html>
