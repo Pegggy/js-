@@ -1,11 +1,30 @@
 
-<h2>Peggy</h2>
-
-总共 {{totalPages}} 页 | 当前 {{currentPage}} 页 
-
+<nav id="pager" data-total-pages='{{totalPages}}' data-current-page='{{currentPage}}'>
+<span>总共{{totalPages}}页，当前{{currentPage}}页</span>
+</nav>
 <article>
 {{#each contents}}
   <h1>{{title}}</h1>
   <p>{{content}}</p>
 {{/each}}
 </article>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+ {
+   let $pager = $('#pager');
+   let totalPages = $pager.data('total-pages');
+   let currentPage = $pager.data('current-page');
+   console.log(totalPages,currentPage);
+   let $ol = $('<ol></ol>');
+   for(let i = 0; i < totalPages; i++){
+      let $li;
+      if(currentPage == (i+1)){
+        $li = $('<li><span>'+ (i+1) +'</span></li>');
+      }else{
+        $li = $('<li><a href="?page='+ (i+1) +'">'+ (i+1) +'</a></li>');
+      }
+    $ol.append($li);
+   }
+   $pager.append($ol);
+ }
+</script>
