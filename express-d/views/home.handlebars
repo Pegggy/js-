@@ -15,16 +15,25 @@
    let totalPages = $pager.data('total-pages');
    let currentPage = $pager.data('current-page');
    console.log(totalPages,currentPage);
+   let buttonCount = 10;
+
    let $ol = $('<ol></ol>');
-   for(let i = 0; i < totalPages; i++){
-      let $li;
-      if(currentPage == (i+1)){
-        $li = $('<li><span>'+ (i+1) +'</span></li>');
+   let start1 = Math.max(1,currentPage-buttonCount/2),
+       end1 = Math.min(start1 + buttonCount-1,totalPages),
+       end2 = Math.min(totalPages,currentPage+buttonCount/2-1),
+       start2 = Math.max(end2-buttonCount+1,1),
+       start = Math.min(start1,start2),
+       end = Math.max(end1,end2);
+  for(let i = start ; i <= end; i++){
+    let $li;
+      if(currentPage === i){
+        $li = $(`<li><span>${i}</span></li>`);
       }else{
-        $li = $('<li><a href="?page='+ (i+1) +'">'+ (i+1) +'</a></li>');
+        $li = $(`<li><a href="?page=${i}">${i}</a></li>`);
       }
     $ol.append($li);
-   }
+  }
+
    $pager.append($ol);
  }
 </script>
